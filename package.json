@@ -1,63 +1,46 @@
 {
   "name": "portfoliopage-frontend",
-  "version": "1.0.0",
-  "description": "Frontend of my portfolio page at nickstaggs.com to showcase my skills, and a blog",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nickstaggs/portfoliopage-frontend.git"
-  },
-  "author": {
-    "name": "Nick Staggs",
-    "email": "nick.c.staggs@gmail.com"
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "angular": "^1.5.6",
-    "angular-markdown-directive": "^0.3.1",
-    "angular-route": "^1.5.6",
-    "angular-sanitize": "^1.6.6",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.4.3",
-    "connect-mongo": "^1.3.2",
-    "dotenv": "^4.0.0",
-    "express": "^4.13.4",
-    "express-session": "^1.15.2",
-    "highlight.js": "^9.12.0",
-    "http": "^0.0.0",
-    "https": "^1.0.0",
-    "karma": "^1.7.0",
-    "method-override": "^2.1.3",
-    "moment": "^2.10.0",
-    "mongodb": "^2.0",
-    "mongoose": "^4.4.12",
-    "morgan": "^1.1.1",
-    "serve-favicon": "^2.3.2",
-    "showdown": "^1.8.2",
-    "showdown-highlight": "^1.0.2",
-    "winston": "^2.3.1"
-  },
-  "license": "MIT",
-  "scripts": {
-    "test": "karma start karma.conf.js"
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "angular-mocks": "^1.6.6",
-    "browserify": "^14.4.0",
-    "chai": "^4.1.2",
-    "jasmine": "^2.8.0",
-    "jasmine-sinon": "^0.4.0",
-    "karma": "^1.7.1",
-    "karma-browserify": "^5.1.1",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-firefox-launcher": "^1.0.1",
-    "karma-ie-launcher": "^1.0.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-jasmine-sinon": "^1.0.4",
-    "karma-mocha": "^1.3.0",
-    "karma-sinon": "^1.0.5",
-    "mocha": "^5.0.0",
-    "request": "^2.83.0",
-    "sinon": "^3.2.1",
-    "watchify": "^3.9.0"
-  }
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
