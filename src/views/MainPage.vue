@@ -2,21 +2,27 @@
     <div >
         <div v-if="isMobile()">
             <TopNavBar></TopNavBar>
+            <router-view></router-view>
         </div>
         <div v-else>
-            <SideMenu></SideMenu>
+            <b-row>
+                <b-col>
+                    <SideMenu></SideMenu>
+                </b-col>
+                <b-col cols="9">
+                    <router-view></router-view>
+                </b-col>
+            </b-row>
         </div>
-        <MainComponent></MainComponent>
     </div>
 </template>
 <script>
 import TopNavBar from '../components/TopNavBar'
-import MainComponent from '../components/MainComponent'
 import SideMenu from '../components/SideMenu'
 
 export default {
     name: 'MainPage',
-    components: { TopNavBar, MainComponent, SideMenu },
+    components: { TopNavBar, SideMenu },
     data() {
         return {
             windowWidth: 0
@@ -36,4 +42,6 @@ export default {
     }
 }
 </script>
+
+
 

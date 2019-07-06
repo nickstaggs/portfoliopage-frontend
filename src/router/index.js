@@ -4,7 +4,7 @@ import MainComponent from '../components/MainComponent.vue'
 
 export default 
 [
-    { path: '/', component: MainPage, name:'MainPage',
+    { path: '', component: MainPage, name:'MainPage',
         children: [
             {
                 path: '',

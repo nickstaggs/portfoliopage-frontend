@@ -1,5 +1,5 @@
 <template>
-    <div class="side-menu m-5">
+    <div class="ml-4 my-3">
         <h2 class="my-4">Nick Staggs</h2>
         <p class="my-4">
             Just your typical coffee addicted software engineer. Exploring the intracacies and whimsies of the web, one cup at a time.
@@ -36,11 +36,6 @@ export default {
 }
 </script>
 <style scoped>
-.side-menu {
-    width: 25%;
-    height: 100%;
-    position: fixed;
-}
 .separation-line {
     display: block;
     font-size: .75em;
