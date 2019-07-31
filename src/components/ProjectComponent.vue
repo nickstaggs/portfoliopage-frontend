@@ -1,27 +1,21 @@
 <template>
-    <div>
-        <b-row class="m-2">
-            <b-col v-for="project in this.projects" v-bind:key="project.name" sm="12" md="6" lg="4">
-                <b-card 
-                    :title="project.name" 
-                    :img-src="getImageUrl(project.picture)">
 
-                    <b-card-text>
-                        {{project.summary}}
-                    </b-card-text>
+    <b-row class="">
+        <b-col v-for="project in this.projects" v-bind:key="project.name" sm="12" md="6" lg="4" class="my-2">
+            <project-card :project="project"></project-card>
+        </b-col>
+    </b-row>
 
-                    <a class="m-2" v-if="project.website" :href="project.website">Site</a>
-                    <a class="m-2" v-if="project.repositorySite" :href="project.repositorySite">Repository</a>
-                </b-card>
-            </b-col>
-        </b-row>
-    </div>
 </template>
 
 <script>
 import axios from 'axios'
+import ProjectCard from './ProjectCard.vue'
 export default {
     name: "ProjectComponent",
+    components: {
+        'project-card': ProjectCard
+    },
     data() {
         return {
             projects: {}
@@ -35,10 +29,20 @@ export default {
             axios
                 .get(process.env.VUE_APP_BASEURL + "projects")
                 .then((response) => this.projects = response.data);
-        },
-        getImageUrl(id) {
-            return process.env.VUE_APP_BASEURL + 'files/' + id;
         }
     }
 }
 </script>
+
+<style scoped>
+
+    .h-97 {
+        height: 97% !important;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+</style>

@@ -2,10 +2,10 @@
     <div >
         <div v-if="isMobile()">
             <TopNavBar></TopNavBar>
-            <router-view></router-view>
+            <router-view class="p-2"></router-view>
         </div>
         <div v-else>
-            <b-row>
+            <b-row class="p-3">
                 <b-col>
                     <SideMenu></SideMenu>
                 </b-col>
