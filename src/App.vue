@@ -17,5 +17,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  
+}
+
+a.no-style:visited, a.no-style:link {
+    text-decoration: inherit;
+    color: inherit;
 }
 </style>

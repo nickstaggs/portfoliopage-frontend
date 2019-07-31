@@ -1,6 +1,6 @@
 <template>
-    <div class="ml-4 my-3">
-        <h2 class="my-4">Nick Staggs</h2>
+    <div class="pl-4 my-3">
+        <h2 class="my-4"><router-link to="/" class="no-style">Nick Staggs</router-link></h2>
         <p class="my-4">
             Just your typical coffee addicted software engineer. Exploring the intracacies and whimsies of the web, one cup at a time.
         </p>
