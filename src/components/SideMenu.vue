@@ -29,7 +29,7 @@ export default {
     },
     methods: {
         isCurrentPage(menuItemPath) {
-            let currentPage = this.$route.path;
+            let currentPage = this.$route.path.split('/')[1];
             return menuItemPath === currentPage;
         }
     }
