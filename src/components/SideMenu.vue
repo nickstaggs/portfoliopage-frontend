@@ -1,12 +1,12 @@
 <template>
-    <div class="pl-4 my-3">
+    <div class="pl-5 my-3 sticky">
         <h2 class="my-4"><router-link to="/" class="no-style">Nick Staggs</router-link></h2>
         <p class="my-4">
             Just your typical coffee addicted software engineer. Exploring the intracacies and whimsies of the web, one cup at a time.
         </p>
         <span class="separation-line mt-4 mb-3"></span>
         <div v-for="child in mainChildren" v-bind:key="child.displayName">
-            <router-link  :to="child.path">
+            <router-link  :to="{name: child.path}">
                 <p v-if="isCurrentPage(child.path)">
                     <b>{{child.displayName}}</b>
                 </p>
@@ -42,5 +42,10 @@ export default {
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 1px solid #f2f3f3;
+}
+
+.sticky {
+    position:sticky;
+    top: 2em;
 }
 </style>
