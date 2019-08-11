@@ -9,7 +9,7 @@
                 <b-col>
                     <SideMenu></SideMenu>
                 </b-col>
-                <b-col cols="9">
+                <b-col cols="9" class="px-5 py-2">
                     <router-view></router-view>
                 </b-col>
             </b-row>
