@@ -1,7 +1,7 @@
 <template>
 
     <b-row class="">
-        <b-col v-for="project in this.projects" v-bind:key="project.name" sm="12" md="6" lg="4" class="my-2">
+        <b-col v-for="project in this.projects" :key="project.name" sm="12" md="6" lg="4" class="my-2">
             <project-card :project="project"></project-card>
         </b-col>
     </b-row>

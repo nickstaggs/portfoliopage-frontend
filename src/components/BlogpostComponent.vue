@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 py-2">
+    <div class="">
         <h1>{{blogpost.title}}</h1>
         <br/>
         <article v-html="blogpost.body"></article>
