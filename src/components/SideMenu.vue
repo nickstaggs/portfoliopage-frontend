@@ -1,5 +1,5 @@
 <template>
-    <div class="pl-5 my-3 sticky">
+    <div class="sticky">
         <h2 class="my-4"><router-link to="/" class="no-style">Nick Staggs</router-link></h2>
         <p class="my-4">
             Just your typical coffee addicted software engineer. Exploring the intracacies and whimsies of the web, one cup at a time.
@@ -46,6 +46,6 @@ export default {
 
 .sticky {
     position:sticky;
-    top: 2em;
+    top: 3em;
 }
 </style>

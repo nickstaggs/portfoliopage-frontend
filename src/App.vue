@@ -1,5 +1,5 @@
 <template>
-  <router-view></router-view>
+  <router-view class=""></router-view>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  overflow-x: hidden;
+  
 }
 
 a.no-style:visited, a.no-style:link {
