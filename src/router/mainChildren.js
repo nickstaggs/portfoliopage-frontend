@@ -1,6 +1,6 @@
 import AboutComponent from '../components/AboutComponent.vue'
 import ProjectComponent from '../components/ProjectComponent.vue'
-import CVComponent from '../components/CVComponent.vue'
+import RésuméComponent from '../components/RésuméComponent.vue'
 import BlogComponent from '../components/BlogComponent.vue'
 import BlogpostComponent from '../components/BlogpostComponent.vue'
 import BlogpostList from '../components/BlogpostList.vue'
@@ -24,5 +24,5 @@ export default
     },
     { path: 'about', component: AboutComponent, name:'about', displayName:'about' },
     { path: 'projects', component: ProjectComponent, name:'projects', displayName:'projects' },
-    { path: 'CV', component: CVComponent, name:'CV', displayName:'CV' },
+    { path: 'résumé', component: RésuméComponent, name:'résumé', displayName:'résumé' },
 ]

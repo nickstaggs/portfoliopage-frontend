@@ -1,16 +1,18 @@
 <template>
-    <div >
+    <div>
         <div v-if="isMobile()">
             <TopNavBar></TopNavBar>
-            <router-view class="p-2"></router-view>
+            <router-view class="m-2"></router-view>
         </div>
         <div v-else>
-            <b-row class="p-3">
+            <b-row class="m-3">
                 <b-col>
                     <SideMenu></SideMenu>
                 </b-col>
-                <b-col cols="9" class="px-5 py-2">
-                    <router-view></router-view>
+                <b-col cols="9" class="">
+                    <div class="mx-3">
+                        <router-view></router-view>
+                    </div>
                 </b-col>
             </b-row>
         </div>
@@ -42,6 +44,3 @@ export default {
     }
 }
 </script>
-
-
-
