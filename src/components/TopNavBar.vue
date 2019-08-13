@@ -3,8 +3,8 @@
         <b-navbar-brand><router-link to="/" class="no-style">Nick Staggs</router-link></b-navbar-brand>
         <b-navbar-nav class="ml-auto">
             <b-nav-item-dropdown right>
-                <template slot="button-content">Home</template>
-                <b-dropdown-item v-for="child in mainChildren" v-bind:key="child.name" :to="child.path"> 
+                <template slot="button-content">{{this.$route.path.split('/')[1]}}</template>
+                <b-dropdown-item v-for="child in mainChildren" :key="child.name" :to="{name: child.path}"> 
                     {{child.displayName}}
                 </b-dropdown-item>
             </b-nav-item-dropdown>
@@ -17,15 +17,8 @@ export default {
     name: 'TopNavBar',
     data() {
         return {
-            mainChildren: MainChildren,
-            currentRoute: ''
+            mainChildren: MainChildren
         }
-    },
-    methods: {
-        isCurrentPage(menuItemPath) {
-            let currentPage = this.$route.path;
-            return menuItemPath === currentPage;
-        }   
     }
 }
 </script>
