@@ -1,5 +1,8 @@
 <template>
     <div class="sticky">
+        <div>
+            <img class="headshot" :src="headshotUrl">
+        </div>
         <h2 class="my-4"><router-link to="/" class="no-style">Nick Staggs</router-link></h2>
         <p class="my-4">
             Just your typical coffee addicted software engineer. Exploring the intracacies and whimsies of the web, one cup at a time.
@@ -25,6 +28,7 @@ export default {
     data() {
         return {
             mainChildren: MainChildren,
+            headshotUrl: process.env.VUE_APP_BASEURL + 'files/5d5225ec957a00280651fd97'
         }
     },
     methods: {
@@ -47,5 +51,14 @@ export default {
 .sticky {
     position:sticky;
     top: 3em;
+}
+
+.headshot {
+    width: 75%;
+    border-radius: 50%;
+    border: lightgrey;
+    border-width: medium;
+    border-style: solid;
+    margin: 0 12.5%;
 }
 </style>
