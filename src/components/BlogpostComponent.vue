@@ -1,4 +1,4 @@
-<template :v-if="this.hasBeenLoaded">
+<template>
     <div>
         <h1>{{blogpost.title}}</h1>
         <h4>{{displayDate}}</h4>
