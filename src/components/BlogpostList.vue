@@ -23,7 +23,13 @@ export default {
         getBlogposts() {
             axios
                 .get(process.env.VUE_APP_BASEURL + "blogposts")
-                .then((response) => this.blogposts = response.data);
+                .then( response => {
+                    this.blogposts = response.data.sort((a,b) => {
+                        let aDate = new Date(a.datePosted);
+                        let bDate = new Date(b.datePosted);
+                        return bDate-aDate;
+                    })
+                });
         }
     },
     mounted: function() {

@@ -1,6 +1,7 @@
-<template>
-    <div class="">
+<template :v-if="this.hasBeenLoaded">
+    <div>
         <h1>{{blogpost.title}}</h1>
+        <h4>{{displayDate}}</h4>
         <br/>
         <article v-html="blogpost.body"></article>
     </div>  
@@ -13,14 +14,18 @@ export default {
     props: [ 'blogpostUrl'],
     data() {
         return {
-            blogpost: {}
+            blogpost: {},
+            displayDate: ""
         }
     },
     methods: {
         getBlogpost() {
             axios
                 .get(process.env.VUE_APP_BASEURL + "blogposts/" + this.blogpostUrl)
-                .then((response) => this.blogpost = response.data);
+                .then( response => {
+                    this.blogpost = response.data;
+                    this.displayDate = (new Date(this.blogpost.date)).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+                });
         }
     },
     mounted: function() {
