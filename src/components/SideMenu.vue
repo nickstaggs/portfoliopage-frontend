@@ -1,6 +1,6 @@
 <template>
     <div class="sticky">
-        <div>
+        <div class="center-headshot">
             <img class="headshot" :src="headshotUrl">
         </div>
         <h2 class="my-4"><router-link to="/" class="no-style">Nick Staggs</router-link></h2>
@@ -54,11 +54,14 @@ export default {
 }
 
 .headshot {
-    width: 75%;
+    width: 60%;
     border-radius: 50%;
     border: lightgrey;
     border-width: medium;
     border-style: solid;
     margin: 0 12.5%;
+}
+.center-headshot {
+    text-align: center;
 }
 </style>
