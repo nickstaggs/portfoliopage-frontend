@@ -33,3 +33,9 @@ export default {
     }
 }
 </script>
+
+<style>
+article img {
+    max-width: 97vw;
+}
+</style>
