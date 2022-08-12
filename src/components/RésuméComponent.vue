@@ -1,5 +1,5 @@
 <template>
-    <iframe src="https://drive.google.com/file/d/1oJADTnAmPbbAdT0Kil9lM-xuUb6v-Q4t/preview" class="full-size-no-border"></iframe>
+    <iframe src="https://docs.google.com/document/d/1Jb_QoTaDL6lIr1iQ2IkwCt4fdUSHHCGxGjlGzXzKp_o/" class="full-size-no-border"></iframe>
 </template>
 <script>
 export default {
